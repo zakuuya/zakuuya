@@ -1,0 +1,83 @@
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+
+#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+
+#Write your code below this line 👇
+enter = input(
+    "You see the island from your boat. Do you dock on sandy shoreline or rocky shoreline? Type 'sand' or 'rock'. \n\n"
+)
+if enter == "sand":
+    path1 = input(
+        'You have arrived safely. As far as you can see, there is nothing but jungle. You hear silence on your left and see large, scary birds flying to the right. Where do you want to go? Type "left" or "right". \n\n'
+    )
+    if path1 == "left":
+        print("Death by stalking Tiger. Game Over.")
+    elif path1 == "right":
+        print("Good idea. You have dodged a hungry tiger. \n\n")
+        path2 = input(
+            "Unfortunately pig sized birds are attracted to the sound of your heartbeat and are now flying towards you. Type 'run' to go further into the jungle. Type 'dive' to dive into a nearby lake. \n\n"
+        )
+        if path2 == "run":
+            print(
+                "The large, predatory birds hunt in packs. They close in on you from 3 directions and eat you alive. Game Over. "
+            )
+        if path2 == "dive":
+            print(
+                "Good move. But the birds are hovering above the lake. You have to enter the underwater cave to escape. \n\n"
+            )
+            path3 = input(
+                "You swim through cave and rise up to surface. You are still in the jungle and hear bird calls from afar. Type 'wait' to catch your breath or 'move' to keep moving. \n\n"
+            )
+            if path3 == "move":
+                print(
+                    "Your heartbeat has not slowed. Birds come back, track you down, and pick you apart. Die a slow and painful death. "
+                )
+            if path3 == "wait":
+                print(
+                    "Smart. Your heartbeat has slowed and the birds have disappeared. You go further into the jungle. \n\n"
+                )
+                path4 = input(
+                    "Now you arrive to a rapidly running river. There is a house ahead. To get past, you must jump.  Type 'search' to find another route through island. Type 'jump' to jump across. \n\n"
+                )
+                if path4 == "search":
+                    print(
+                        "You run into a group of starving monkeys. Rest in peace\n"
+                        "...or pieces?")
+                if path4 == "jump":
+                    path5 = input(
+                        "You arrive at the house. There is a house with 3 doors. One red, one yellow and one blue. Which color do you choose? \n\n"
+                    )
+                    if path5 == "red":
+                        print("The house explodes. Game Over. ")
+                    if path5 == "yellow":
+                        print("You found the treasure! You Win! ")
+                    if path5 == "blue":
+                        print("You unleash killer bees. Game Over. ")
+
+else:
+    print(
+        "Your boat has crashed thanks to an underwater rock formation. You are shipwrecked and the current drags you to the open ocean where you die from starvation. Game Over. "
+    )
